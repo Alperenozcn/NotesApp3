@@ -38,7 +38,7 @@ namespace NotesApp3
                 //addedNumber.Description = txtPerson.Text;
                 addedNumber.Definition = txtPerson.Text + " - " + txtNumber.Text + " - " + txtNote.Text;
 
-                // Yeni Id hesaplamasýný optimize etmek için:
+                
                 if (DataStore.Numbers.Count > 0)
                 {
                     addedNumber.Id = DataStore.Numbers.Max(n => n.Id) + 1;
@@ -65,7 +65,7 @@ namespace NotesApp3
             {
                 selectedNumber = (Number)listBox1.SelectedItem;
 
-                // Definition'ý '-' karakterine göre bölelim
+                
                 string[] parts = selectedNumber.Definition.Split('-');
 
                 if (parts.Length >= 3)
